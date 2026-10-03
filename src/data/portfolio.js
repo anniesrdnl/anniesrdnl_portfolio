@@ -1,5 +1,6 @@
 import todosImage from '../assets/awesometodos.png'
 import teechImage from '../assets/teech.png'
+import smartwasteImage from '../assets/smartwaste.png'
 
 export const navigation = [
   {
@@ -42,6 +43,7 @@ export const projects = [
       'ONNX Runtime Web',
     ],
     link: 'https://smartwaste-cv.vercel.app/#classifier',
+    image: smartwasteImage,
   },
   {
     id: 2,
