@@ -92,7 +92,7 @@ function App() {
   const firstText = "Hello! I'm"
   const nameText = 'Annie'
   const secondText =
-    'I design, build, and ship products end to end.'
+    'I design and build as an aspiring full-stack developer in my junior year.'
 
   const [typedFirst, setTypedFirst] = useState('')
   const [typedName, setTypedName] = useState('')
