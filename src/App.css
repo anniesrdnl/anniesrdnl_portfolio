@@ -273,27 +273,29 @@ button {
   margin: 24px auto 0;
 }
 
+/* Even thirds: each pill is centered on 1/6, 3/6 and 5/6 of the width */
 .hero-floating-skill {
   position: absolute;
   z-index: 2;
+  translate: -50% 0;
   will-change: transform;
 }
 
 .hero-floating-skill-1 {
-  top: 0;
-  left: 4%;
+  top: 12%;
+  left: 16.667%;
   animation: float-skill-one 3.2s ease-in-out infinite;
 }
 
 .hero-floating-skill-2 {
-  top: 26%;
-  right: 5%;
+  top: 12%;
+  left: 83.333%;
   animation: float-skill-two 3.8s ease-in-out infinite;
 }
 
 .hero-floating-skill-3 {
-  top: 48%;
-  left: 30%;
+  top: 58%;
+  left: 50%;
   animation: float-skill-three 3.5s ease-in-out infinite;
 }
 
@@ -1580,6 +1582,7 @@ button {
 
   .hero-floating-skill {
     position: absolute;
+    translate: none;
   }
 
   .hero-floating-skill-1 {
