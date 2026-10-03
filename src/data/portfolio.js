@@ -57,15 +57,16 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Faculty Consultation',
+    title: 'Teech',
     description:
-      'A consultation platform designed to help students check faculty availability, schedules, announcements, and appointment requests.',
+      'A consultation platform that gives students and faculty a clearer way to connect, from finding available instructors to booking consultations.',
     technologies: [
+      'Next.js',
       'React',
+      'CSS Modules',
       'UI/UX',
-      'Responsive',
     ],
-    link: 'https://example.com/faculty-consultation',
+    link: 'https://teech-app.vercel.app/',
   },
   {
     id: 4,
