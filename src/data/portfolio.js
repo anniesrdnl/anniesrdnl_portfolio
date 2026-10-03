@@ -54,6 +54,7 @@ export const projects = [
       'ONNX Runtime Web',
     ],
     link: 'https://smartwaste-cv.vercel.app/#classifier',
+    source: 'https://github.com/anniesrdnl/Smart-Waste',
     image: smartwasteImage,
   },
   {
@@ -76,6 +77,7 @@ export const projects = [
       'CSS',
     ],
     link: 'https://awesometodos-app-1.onrender.com',
+    source: 'https://github.com/anniesrdnl/Awesometodos_app',
     image: todosImage,
   },
   {
@@ -100,6 +102,7 @@ export const projects = [
       'UI/UX',
     ],
     link: 'https://teech-app.vercel.app/',
+    source: 'https://github.com/Aelowww/Teech',
     image: teechImage,
   },
 ]
