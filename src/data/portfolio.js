@@ -68,26 +68,9 @@ export const projects = [
     ],
     link: 'https://teech-app.vercel.app/',
   },
-  {
-    id: 4,
-    title: 'Product Platform',
-    description:
-      'A responsive product experience focused on clear information architecture, reliable interactions, and production-ready implementation.',
-    technologies: [
-      'React',
-      'Tailwind CSS',
-      'Vite',
-    ],
-    link: 'https://example.com/product-platform',
-  },
 ]
 
 export const services = [
-  {
-    title: 'Agentic Engineering',
-    description:
-      'Building intelligent systems and AI-powered workflows that automate repetitive tasks and support real product operations.',
-  },
   {
     title: 'Product Design',
     description:
