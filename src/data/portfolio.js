@@ -1,4 +1,5 @@
 import todosImage from '../assets/awesometodos.png'
+import teechImage from '../assets/teech.png'
 
 export const navigation = [
   {
@@ -67,6 +68,7 @@ export const projects = [
       'UI/UX',
     ],
     link: 'https://teech-app.vercel.app/',
+    image: teechImage,
   },
 ]
 
