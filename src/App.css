@@ -297,11 +297,6 @@ button {
   animation: float-skill-three 3.5s ease-in-out infinite;
 }
 
-.hero-floating-skill-4 {
-  right: 25%;
-  bottom: 13px;
-  animation: float-skill-four 4.1s ease-in-out infinite;
-}
 
 @keyframes float-skill-one {
   0%,
@@ -333,17 +328,6 @@ button {
 
   50% {
     transform: translateY(-11px);
-  }
-}
-
-@keyframes float-skill-four {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(12px);
   }
 }
 
@@ -1619,13 +1603,6 @@ button {
     animation: float-skill-three 3.5s ease-in-out infinite;
   }
 
-  .hero-floating-skill-4 {
-    top: 212px;
-    right: auto;
-    bottom: auto;
-    left: 10%;
-    animation: float-skill-four 4.1s ease-in-out infinite;
-  }
 
   .hero-button {
     position: absolute !important;
@@ -1791,10 +1768,6 @@ button {
     right: 10%;
   }
 
-  .hero-floating-skill-4 {
-    top: 201px;
-    left: 8%;
-  }
 
   .hero-button {
     top: 625px !important;
@@ -1906,10 +1879,6 @@ button {
     right: 8%;
   }
 
-  .hero-floating-skill-4 {
-    top: 188px;
-    left: 7%;
-  }
 
   .hero-button {
     top: 590px !important;
@@ -2027,10 +1996,6 @@ button {
     right: 5%;
   }
 
-  .hero-floating-skill-4 {
-    top: 175px;
-    left: 5%;
-  }
 
   .hero-button {
     top: 555px !important;

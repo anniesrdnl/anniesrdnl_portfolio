@@ -368,19 +368,13 @@ function App() {
 
               <div className="hero-floating-skill hero-floating-skill-2">
                 <TechPill>
-                  Automation
+                  Web Development
                 </TechPill>
               </div>
 
               <div className="hero-floating-skill hero-floating-skill-3">
                 <TechPill>
                   Product Design
-                </TechPill>
-              </div>
-
-              <div className="hero-floating-skill hero-floating-skill-4">
-                <TechPill>
-                  Agentic Engineering
                 </TechPill>
               </div>
             </div>
