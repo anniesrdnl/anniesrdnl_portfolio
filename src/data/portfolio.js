@@ -244,8 +244,6 @@ export const stack = {
     'GitHub',
     'Vite',
     'Vercel',
-    'DigitalOcean',
-    'Playwright',
     'npm',
   ],
 }
