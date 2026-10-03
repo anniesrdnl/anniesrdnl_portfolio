@@ -109,19 +109,146 @@ export const projects = [
 
 export const services = [
   {
+    slug: 'product-design',
     title: 'Product Design',
     description:
       'Designing clear, intuitive, and responsive digital experiences from early concepts to polished interfaces.',
+    overview: [
+      'I design digital products that are clear, intuitive and easy to use, from rough early ideas to polished, responsive interfaces that are ready to build.',
+      'Good design starts with understanding who will use the product and what they need to get done, so every screen has a clear purpose and nothing gets in the way.',
+    ],
+    offerings: [
+      'User flows and wireframes',
+      'High-fidelity UI design in Figma',
+      'Responsive layouts for desktop and mobile',
+      'Interactive prototypes for testing ideas',
+      'Reusable components and simple design systems',
+    ],
+    process: [
+      {
+        title: 'Understand',
+        text: 'Learn the goals, the users and the problem the product needs to solve.',
+      },
+      {
+        title: 'Explore',
+        text: 'Sketch flows and wireframes to try ideas quickly before committing.',
+      },
+      {
+        title: 'Design',
+        text: 'Turn the strongest direction into polished, responsive screens.',
+      },
+      {
+        title: 'Refine',
+        text: 'Gather feedback and iterate until it feels effortless to use.',
+      },
+    ],
+    tools: [
+      'Figma',
+      'UI/UX',
+      'Responsive Design',
+      'Prototyping',
+    ],
+    projects: [
+      'teech',
+      'smart-waste-classifier',
+    ],
   },
   {
+    slug: 'web-development',
     title: 'Web Product Development',
     description:
       'Turning product ideas into responsive, interactive, and production-ready web applications.',
+    overview: [
+      'I turn product ideas and designs into fast, responsive and interactive web applications that work well on any screen.',
+      'I care about clean, maintainable code and the small details, like loading states, accessibility and smooth interactions, that make a product feel finished.',
+    ],
+    offerings: [
+      'Responsive websites and web apps',
+      'Turning Figma designs into accurate, working code',
+      'Interactive interfaces with React and Next.js',
+      'Performance and accessibility improvements',
+      'Deployment and hosting on Vercel',
+    ],
+    process: [
+      {
+        title: 'Plan',
+        text: 'Break the product into pages, components and the data each one needs.',
+      },
+      {
+        title: 'Build',
+        text: 'Develop the interface in small, working pieces that can be reviewed early.',
+      },
+      {
+        title: 'Test',
+        text: 'Check it across screen sizes and browsers, and polish the details.',
+      },
+      {
+        title: 'Launch',
+        text: 'Deploy it live and keep improving it based on real use.',
+      },
+    ],
+    tools: [
+      'React.js',
+      'Next.js',
+      'JavaScript',
+      'Tailwind CSS',
+      'Vite',
+      'Vercel',
+    ],
+    projects: [
+      'smart-waste-classifier',
+      'teech',
+      'awesome-todos',
+    ],
   },
   {
+    slug: 'full-stack',
     title: 'Full-stack Delivery',
     description:
       'Handling the complete development process across frontend, backend, APIs, databases, deployment, and iteration.',
+    overview: [
+      'I handle the whole journey of a product: the interface people use, the backend, APIs and database behind it, and the deployment that puts it in front of users.',
+      'Owning both sides means fewer handoffs, faster iteration and a product that holds together as it grows.',
+    ],
+    offerings: [
+      'Frontend and backend development',
+      'REST API design and integration',
+      'Database design with PostgreSQL and Supabase',
+      'Authentication and data handling',
+      'Deployment, maintenance and iteration',
+    ],
+    process: [
+      {
+        title: 'Scope',
+        text: 'Agree on the features, the data model and what a first release includes.',
+      },
+      {
+        title: 'Build',
+        text: 'Develop the frontend, backend and database together, end to end.',
+      },
+      {
+        title: 'Ship',
+        text: 'Deploy to production with the right setup for hosting and data.',
+      },
+      {
+        title: 'Iterate',
+        text: 'Fix issues, add features and keep the product healthy over time.',
+      },
+    ],
+    tools: [
+      'React.js',
+      'Node.js',
+      'Express',
+      'Supabase',
+      'PostgreSQL',
+      'REST APIs',
+      'Git',
+      'Vercel',
+    ],
+    projects: [
+      'teech',
+      'smart-waste-classifier',
+    ],
   },
 ]
 

@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar'
 import MobileHeader from './components/MobileHeader'
 import ProjectCard from './components/ProjectCard'
 import ProjectDetail from './components/ProjectDetail'
+import ServiceDetail from './components/ServiceDetail'
 import ServiceCard from './components/ServiceCard'
 import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
@@ -32,27 +33,38 @@ const CONFETTI = [
   { x: 94, dx: 28, dy: -32, r: 180, shape: 'bar', delay: 75 },
 ]
 
-// Project pages live at #project/<slug> so links and the back button work
-const getProjectFromHash = () => {
-  const match = window.location.hash.match(/^#project\/(.+)$/)
+// Detail pages live at #project/<slug> and #service/<slug>
+// so links and the back button work
+const pageCollections = {
+  project: projects,
+  service: services,
+}
 
-  return match
-    ? projects.find((project) => project.slug === match[1]) ?? null
-    : null
+const getPageFromHash = () => {
+  const match = window.location.hash.match(/^#(project|service)\/(.+)$/)
+
+  if (!match) {
+    return null
+  }
+
+  const [, type, slug] = match
+  const item = pageCollections[type].find((entry) => entry.slug === slug)
+
+  return item ? { type, item } : null
 }
 
 function App() {
   const [showAllProjects, setShowAllProjects] = useState(false)
   const [selectedJournal, setSelectedJournal] = useState(null)
-  const [selectedProject, setSelectedProject] = useState(getProjectFromHash)
+  const [selectedPage, setSelectedPage] = useState(getPageFromHash)
 
   useEffect(() => {
     const handleHashChange = () => {
-      const project = getProjectFromHash()
+      const page = getPageFromHash()
 
-      setSelectedProject(project)
+      setSelectedPage(page)
 
-      if (project) {
+      if (page) {
         setSelectedJournal(null)
         window.scrollTo({ top: 0, behavior: 'instant' })
         return
@@ -264,17 +276,29 @@ function App() {
     typingStage === 'pause' ||
     typingStage === 'deleteSecond'
 
-  if (selectedProject) {
+  if (selectedPage) {
+    const { type, item } = selectedPage
+
     return (
       <div className="portfolio-app">
         <Sidebar />
         <MobileHeader />
 
         <main className="portfolio-main project-detail-main">
-          <ProjectDetail
-            key={selectedProject.slug}
-            project={selectedProject}
-          />
+          {type === 'project' ? (
+            <ProjectDetail
+              key={item.slug}
+              project={item}
+            />
+          ) : (
+            <ServiceDetail
+              key={item.slug}
+              service={item}
+              relatedProjects={projects.filter((project) =>
+                item.projects.includes(project.slug),
+              )}
+            />
+          )}
         </main>
 
         <ScrollTop />
