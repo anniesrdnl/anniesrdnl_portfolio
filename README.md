@@ -1,19 +1,59 @@
-# React + Vite
+# Annie Sardiniola — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio: a single-page site showcasing my projects, services, journal, and tech stack.
 
-Currently, two official plugins are available:
+**Live site:** [anniesardiniola.vercel.app](https://anniesardiniola.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Typewriter-style hero intro with a light confetti burst
+- Sidebar navigation that highlights the current section as you scroll
+- Project cards with live links
+- Services, journal entries, and a grouped tech stack
+- Responsive layout with a dedicated mobile header and bottom nav
+- Respects `prefers-reduced-motion`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Built with
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+- [React 19](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Requires [Node.js](https://nodejs.org/) 20 or later.
+
+```bash
+git clone https://github.com/anniesrdnl/anniesrdnl_portfolio.git
+cd anniesrdnl_portfolio
+npm install
+npm run dev
+```
+
+Then open the local URL Vite prints (usually http://localhost:5173).
+
+## Scripts
+
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start the dev server                 |
+| `npm run build`   | Build for production into `dist/`    |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint`    | Lint the code with ESLint            |
+
+## Project structure
+
+```
+src/
+├── components/   # Sidebar, MobileHeader, ProjectCard, ServiceCard, ...
+├── data/         # portfolio.js — projects, services, journal, tech stack
+├── assets/       # Images
+├── App.jsx       # Page layout and sections
+└── App.css       # Styles
+```
+
+Most content (projects, services, tech stack) lives in `src/data/portfolio.js`, so it can be updated without touching the components.
+
+## Contact
+
+Email: [anniesardiniola@gmail.com](mailto:anniesardiniola@gmail.com)
