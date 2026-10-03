@@ -2,7 +2,7 @@
 
 My personal portfolio: a single-page site showcasing my projects, services, journal, and tech stack.
 
-**Live site:** [anniesardiniola.vercel.app](https://anniesardiniola.vercel.app/)
+**Live site:** [anniesrdnl-portfolio.vercel.app](https://anniesrdnl-portfolio.vercel.app/)
 
 ## Features
 
