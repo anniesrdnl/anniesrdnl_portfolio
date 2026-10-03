@@ -38,6 +38,15 @@ export const projects = [
     tagline: 'My machine learning course project: sorting waste from a single photo.',
     description:
       'A computer vision project for my machine learning course that classifies waste from a photo into six categories and gives disposal guidance, running entirely in the browser.',
+    overview: [
+      'SmartWaste is a web app that identifies common waste materials from a single photo and explains how to handle them. Upload an image and it predicts one of six categories (cardboard, glass, metal, paper, plastic or trash), shows a confidence score for each, and gives disposal guidance.',
+      'Under the hood it uses transfer learning: a MobileNetV2 network pretrained on ImageNet, topped with a new classification head (global average pooling, a 256-unit dense layer, dropout and a six-way softmax). The deepest blocks were then fine-tuned on waste photos with a small learning rate.',
+      'The trained model runs entirely in the browser with ONNX Runtime Web. There is no account and no waiting, and photos never leave the device.',
+    ],
+    motivation: [
+      'I built SmartWaste for my machine learning course. Sorting waste properly is something most people want to do but often get wrong, because it is hard to tell at a glance which materials can be recycled.',
+      'It was also a chance to take a model beyond the notebook: train it with transfer learning, then ship it as a real tool anyone can use from their browser, with privacy built in.',
+    ],
     technologies: [
       'Computer Vision',
       'MobileNetV2',
@@ -54,6 +63,13 @@ export const projects = [
     tagline: 'A simple, clean way to keep track of everyday tasks.',
     description:
       'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
+    overview: [
+      'Awesome Todos is a simple task management app for creating, organizing and tracking todos. It sticks to the essentials and keeps the interface clean, so adding a task or checking one off takes a second.',
+      'It is built with React and plain CSS, which made it a good way to practice components, state and handling user input.',
+    ],
+    motivation: [
+      'Awesome Todos was one of my early React projects. I wanted to understand how components and state fit together by building something small that I would actually use day to day.',
+    ],
     technologies: [
       'React.js',
       'JavaScript',
@@ -69,6 +85,14 @@ export const projects = [
     tagline: 'A clearer way for students and faculty to connect for consultations.',
     description:
       'A consultation platform that gives students and faculty a clearer way to connect, from finding available instructors to booking consultations.',
+    overview: [
+      'Teech is a consultation platform that makes it easier for students and faculty to connect. Instead of chasing teachers between classes or waiting on replies, students can find available instructors and book a consultation in a few steps.',
+      'It is built with Next.js and React, styled with CSS Modules, and designed to feel simple and clear for both students and faculty.',
+    ],
+    motivation: [
+      'As a student, I have seen how hard it can be to get time with faculty: consultation hours clash with classes, and it is rarely clear who is available and when.',
+      'I wanted a clearer, more respectful way for both sides to set up consultations. Teech is my take on that, putting teachers within reach.',
+    ],
     technologies: [
       'Next.js',
       'React',

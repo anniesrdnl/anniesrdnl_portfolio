@@ -94,10 +94,27 @@ function ProjectDetail({ project }) {
         )}
       </div>
 
-      <section className="project-detail-about">
-        <h2>about</h2>
-        <p>{project.description}</p>
-      </section>
+      <div className="project-detail-body">
+        <section className="project-detail-section">
+          <h2>Overview</h2>
+
+          {(project.overview ?? [project.description]).map(
+            (paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ),
+          )}
+        </section>
+
+        {project.motivation && (
+          <section className="project-detail-section">
+            <h2>Motivation</h2>
+
+            {project.motivation.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </section>
+        )}
+      </div>
     </article>
   )
 }
