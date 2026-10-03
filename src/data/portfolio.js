@@ -59,29 +59,6 @@ export const projects = [
   },
   {
     id: 2,
-    slug: 'awesome-todos',
-    title: 'Awesome Todos',
-    tagline: 'A simple, clean way to keep track of everyday tasks.',
-    description:
-      'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
-    overview: [
-      'Awesome Todos is a simple task management app for creating, organizing and tracking todos. It sticks to the essentials and keeps the interface clean, so adding a task or checking one off takes a second.',
-      'It is built with React and plain CSS, which made it a good way to practice components, state and handling user input.',
-    ],
-    motivation: [
-      'Awesome Todos was one of my early React projects. I wanted to understand how components and state fit together by building something small that I would actually use day to day.',
-    ],
-    technologies: [
-      'React.js',
-      'JavaScript',
-      'CSS',
-    ],
-    link: 'https://awesometodos-app-1.onrender.com',
-    source: 'https://github.com/anniesrdnl/Awesometodos_app',
-    image: todosImage,
-  },
-  {
-    id: 3,
     slug: 'teech',
     title: 'Teech',
     tagline: 'A clearer way for students and faculty to connect for consultations.',
@@ -104,6 +81,29 @@ export const projects = [
     link: 'https://teech-app.vercel.app/',
     source: 'https://github.com/Aelowww/Teech',
     image: teechImage,
+  },
+  {
+    id: 3,
+    slug: 'awesome-todos',
+    title: 'Awesome Todos',
+    tagline: 'A simple, clean way to keep track of everyday tasks.',
+    description:
+      'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
+    overview: [
+      'Awesome Todos is a simple task management app for creating, organizing and tracking todos. It sticks to the essentials and keeps the interface clean, so adding a task or checking one off takes a second.',
+      'It is built with React and plain CSS, which made it a good way to practice components, state and handling user input.',
+    ],
+    motivation: [
+      'Awesome Todos was one of my early React projects. I wanted to understand how components and state fit together by building something small that I would actually use day to day.',
+    ],
+    technologies: [
+      'React.js',
+      'JavaScript',
+      'CSS',
+    ],
+    link: 'https://awesometodos-app-1.onrender.com',
+    source: 'https://github.com/anniesrdnl/Awesometodos_app',
+    image: todosImage,
   },
 ]
 
