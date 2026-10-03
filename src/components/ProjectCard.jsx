@@ -3,10 +3,8 @@ import TechPill from './TechPill'
 function ProjectCard({ project }) {
   return (
     <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Open ${project.title}`}
+      href={`#project/${project.slug}`}
+      aria-label={`View ${project.title} details`}
       className="project-card group flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-white"
     >
       <div className="project-card-image h-[370px] shrink-0 overflow-hidden bg-[#e7e8eb]">
@@ -34,7 +32,7 @@ function ProjectCard({ project }) {
           </h3>
 
           <span className="project-card-arrow shrink-0 font-mono text-lg text-slate-400">
-            ↗
+            →
           </span>
         </div>
 

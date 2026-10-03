@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import annie from '../assets/annie.png'
+import { goToSection } from '../utils/goToSection'
 
 const navigation = [
   {
@@ -238,25 +239,12 @@ function Sidebar() {
       setPressedItem('')
     }, 300)
 
-    const section = document.getElementById(id)
-
-    if (!section) {
-      return
-    }
-
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+    goToSection(id)
   }
 
   const scrollHome = () => {
     setActiveSection('')
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
+    goToSection('home')
   }
 
   return (

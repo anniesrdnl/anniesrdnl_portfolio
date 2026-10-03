@@ -33,7 +33,9 @@ export const navigation = [
 export const projects = [
   {
     id: 1,
+    slug: 'smart-waste-classifier',
     title: 'Smart Waste Management Classifier',
+    tagline: 'My machine learning course project: sorting waste from a single photo.',
     description:
       'A computer vision project for my machine learning course that classifies waste from a photo into six categories and gives disposal guidance, running entirely in the browser.',
     technologies: [
@@ -47,7 +49,9 @@ export const projects = [
   },
   {
     id: 2,
+    slug: 'awesome-todos',
     title: 'Awesome Todos',
+    tagline: 'A simple, clean way to keep track of everyday tasks.',
     description:
       'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
     technologies: [
@@ -60,7 +64,9 @@ export const projects = [
   },
   {
     id: 3,
+    slug: 'teech',
     title: 'Teech',
+    tagline: 'A clearer way for students and faculty to connect for consultations.',
     description:
       'A consultation platform that gives students and faculty a clearer way to connect, from finding available instructors to booking consultations.',
     technologies: [

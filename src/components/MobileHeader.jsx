@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import annie from '../assets/annie.png'
 import { navigation } from '../data/portfolio'
+import { goToSection } from '../utils/goToSection'
 
 function NavIcon({ type }) {
   if (type === 'projects') {
@@ -117,21 +118,13 @@ function MobileHeader() {
   const scrollToSection = (id) => {
     setActiveItem(id)
     setMenuOpen(false)
-
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+    goToSection(id)
   }
 
   const goHome = () => {
     setActiveItem('home')
     setMenuOpen(false)
-
-    document.getElementById('home')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+    goToSection('home')
   }
 
   return (

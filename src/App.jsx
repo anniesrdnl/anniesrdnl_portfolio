@@ -4,6 +4,7 @@ import annie from './assets/annie.png'
 import Sidebar from './components/Sidebar'
 import MobileHeader from './components/MobileHeader'
 import ProjectCard from './components/ProjectCard'
+import ProjectDetail from './components/ProjectDetail'
 import ServiceCard from './components/ServiceCard'
 import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
@@ -31,9 +32,50 @@ const CONFETTI = [
   { x: 94, dx: 28, dy: -32, r: 180, shape: 'bar', delay: 75 },
 ]
 
+// Project pages live at #project/<slug> so links and the back button work
+const getProjectFromHash = () => {
+  const match = window.location.hash.match(/^#project\/(.+)$/)
+
+  return match
+    ? projects.find((project) => project.slug === match[1]) ?? null
+    : null
+}
+
 function App() {
   const [showAllProjects, setShowAllProjects] = useState(false)
   const [selectedJournal, setSelectedJournal] = useState(null)
+  const [selectedProject, setSelectedProject] = useState(getProjectFromHash)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const project = getProjectFromHash()
+
+      setSelectedProject(project)
+
+      if (project) {
+        setSelectedJournal(null)
+        window.scrollTo({ top: 0, behavior: 'instant' })
+        return
+      }
+
+      // Back on the home page: scroll to the section named in the hash
+      const sectionId = window.location.hash.slice(1) || 'home'
+
+      setSelectedJournal(null)
+
+      window.setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
 
   const firstText = "Hello! I'm"
   const nameText = 'Annie'
@@ -221,6 +263,24 @@ function App() {
     typingStage === 'second' ||
     typingStage === 'pause' ||
     typingStage === 'deleteSecond'
+
+  if (selectedProject) {
+    return (
+      <div className="portfolio-app">
+        <Sidebar />
+        <MobileHeader />
+
+        <main className="portfolio-main project-detail-main">
+          <ProjectDetail
+            key={selectedProject.slug}
+            project={selectedProject}
+          />
+        </main>
+
+        <ScrollTop />
+      </div>
+    )
+  }
 
   if (selectedJournal) {
     return (
