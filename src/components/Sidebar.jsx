@@ -1,77 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import BrandButton from './BrandButton'
 import NavIcon from './NavIcon'
 import { navigation } from '../data/portfolio'
 import { goToSection } from '../utils/goToSection'
+import { useActiveSection } from '../hooks/useActiveSection'
+
+const SECTION_IDS = navigation.map((item) => item.id)
 
 function Sidebar() {
-  const [activeSection, setActiveSection] = useState('')
+  const [activeSection, setActiveSection] = useActiveSection(SECTION_IDS)
   const [pressedItem, setPressedItem] = useState('')
-
-  useEffect(() => {
-    const sectionIds = navigation.map((item) => item.id)
-
-    const updateActiveSection = () => {
-      const scrollPosition =
-        window.scrollY + window.innerHeight * 0.35
-
-      if (window.scrollY < 150) {
-        setActiveSection('')
-        return
-      }
-
-      const reachedBottom =
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 2
-
-      if (reachedBottom) {
-        setActiveSection(sectionIds[sectionIds.length - 1])
-        return
-      }
-
-      let currentSection = ''
-
-      sectionIds.forEach((id) => {
-        const section = document.getElementById(id)
-
-        if (
-          section &&
-          section.offsetTop <= scrollPosition
-        ) {
-          currentSection = id
-        }
-      })
-
-      setActiveSection(currentSection)
-    }
-
-    updateActiveSection()
-
-    window.addEventListener(
-      'scroll',
-      updateActiveSection,
-      {
-        passive: true,
-      }
-    )
-
-    window.addEventListener(
-      'resize',
-      updateActiveSection
-    )
-
-    return () => {
-      window.removeEventListener(
-        'scroll',
-        updateActiveSection
-      )
-
-      window.removeEventListener(
-        'resize',
-        updateActiveSection
-      )
-    }
-  }, [])
 
   const scrollToSection = (id) => {
     setPressedItem(id)
@@ -84,8 +22,8 @@ function Sidebar() {
   }
 
   return (
-    <aside className="fixed left-0 top-0 z-40 hidden h-screen w-[300px] border-r border-slate-200 bg-[#f8f9fa] lg:flex lg:flex-col">
-      <div className="flex h-full min-h-0 flex-col px-[25px] pb-[34px] pt-[40px]">
+    <aside className="fixed left-0 top-0 z-40 hidden h-dvh w-(--sidebar-width) overflow-y-auto border-r border-slate-200 bg-[#f8f9fa] lg:flex lg:flex-col">
+      <div className="flex min-h-full flex-col px-[25px] pb-[34px] pt-[40px] max-xl:px-[22px]">
         <BrandButton
           onClick={() => setActiveSection('')}
           className="flex w-fit flex-col items-start text-left"

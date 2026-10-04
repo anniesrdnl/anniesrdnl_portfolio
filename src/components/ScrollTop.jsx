@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { scrollBehavior } from '../utils/goToSection'
 
 function ScrollTop() {
   const [visible, setVisible] = useState(false)
@@ -22,7 +23,7 @@ function ScrollTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: scrollBehavior(),
     })
   }
 

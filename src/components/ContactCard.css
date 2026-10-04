@@ -276,6 +276,32 @@
   }
 }
 
+@media (pointer: coarse) {
+  .contact-socials {
+    margin-top: 14px;
+    row-gap: 0;
+  }
+
+  .contact-socials a {
+    padding: 12px 0;
+  }
+
+  .contact-email {
+    margin-top: 2px;
+    padding: 9px 0;
+  }
+
+  .contact-dots {
+    margin-top: 38px;
+  }
+}
+
+@media (pointer: coarse) and (max-width: 767px) {
+  .contact-dots {
+    margin-top: 24px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .contact-card,
   .contact-dots::after {

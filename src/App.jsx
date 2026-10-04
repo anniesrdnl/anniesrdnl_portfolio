@@ -10,8 +10,7 @@ import ServiceTabs from './components/ServiceTabs'
 import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
 import ScrollTop from './components/ScrollTop'
-import HeroTechIcons from './components/HeroTechIcons'
-import TapHint from './components/TapHint'
+import Hero from './components/Hero'
 import ContactCard from './components/ContactCard'
 
 import {
@@ -20,21 +19,9 @@ import {
   journals,
   stack,
 } from './data/portfolio'
+import { scrollBehavior } from './utils/goToSection'
 
 import './App.css'
-
-// Hand-placed confetti: start x (% of name), burst offset, spin, shape, delay
-const CONFETTI = [
-  { x: 8, dx: -26, dy: -34, r: 160, shape: 'bar', delay: 0 },
-  { x: 18, dx: -12, dy: -48, r: -120, shape: 'dot', delay: 60 },
-  { x: 30, dx: -6, dy: -40, r: 200, shape: 'bar', delay: 120 },
-  { x: 42, dx: 4, dy: -54, r: -180, shape: 'dot', delay: 30 },
-  { x: 52, dx: -4, dy: -44, r: 140, shape: 'bar', delay: 90 },
-  { x: 62, dx: 8, dy: -50, r: -160, shape: 'dot', delay: 150 },
-  { x: 74, dx: 12, dy: -38, r: 220, shape: 'bar', delay: 45 },
-  { x: 84, dx: 18, dy: -46, r: -140, shape: 'dot', delay: 105 },
-  { x: 94, dx: 28, dy: -32, r: 180, shape: 'bar', delay: 75 },
-]
 
 // Detail pages live at #project/<slug> and #service/<slug>
 // so links and the back button work
@@ -81,13 +68,13 @@ function App() {
 
       window.setTimeout(() => {
         if (!sectionId || sectionId === 'home') {
-          window.scrollTo({ top: 0, behavior: 'smooth' })
+          window.scrollTo({ top: 0, behavior: scrollBehavior() })
           return
         }
 
         document
           .getElementById(sectionId)
-          ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          ?.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
       }, 50)
     }
 
@@ -97,134 +84,6 @@ function App() {
       window.removeEventListener('hashchange', handleHashChange)
     }
   }, [])
-
-  const firstText = "Hello! I'm"
-  const nameText = 'Annie'
-  const secondText =
-    'I design and build as an aspiring full-stack developer in my junior year.'
-
-  const [typedFirst, setTypedFirst] = useState('')
-  const [typedName, setTypedName] = useState('')
-  const [typedSecond, setTypedSecond] = useState('')
-  const [typingStage, setTypingStage] = useState('first')
-
-  useEffect(() => {
-    let timeout
-
-    if (typingStage === 'first') {
-      if (typedFirst.length < firstText.length) {
-        timeout = window.setTimeout(() => {
-          setTypedFirst(
-            firstText.slice(0, typedFirst.length + 1),
-          )
-        }, 115)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('name')
-        }, 250)
-      }
-    }
-
-    if (typingStage === 'name') {
-      if (typedName.length < nameText.length) {
-        timeout = window.setTimeout(() => {
-          setTypedName(
-            nameText.slice(0, typedName.length + 1),
-          )
-        }, 130)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('second')
-        }, 400)
-      }
-    }
-
-    if (typingStage === 'second') {
-      if (typedSecond.length < secondText.length) {
-        timeout = window.setTimeout(() => {
-          setTypedSecond(
-            secondText.slice(0, typedSecond.length + 1),
-          )
-        }, 70)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('pause')
-        }, 2200)
-      }
-    }
-
-    if (typingStage === 'pause') {
-      timeout = window.setTimeout(() => {
-        setTypingStage('deleteSecond')
-      }, 300)
-    }
-
-    if (typingStage === 'deleteSecond') {
-      if (typedSecond.length > 0) {
-        timeout = window.setTimeout(() => {
-          setTypedSecond(
-            secondText.slice(0, typedSecond.length - 1),
-          )
-        }, 30)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('deleteName')
-        }, 150)
-      }
-    }
-
-    if (typingStage === 'deleteName') {
-      if (typedName.length > 0) {
-        timeout = window.setTimeout(() => {
-          setTypedName(
-            nameText.slice(0, typedName.length - 1),
-          )
-        }, 45)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('deleteFirst')
-        }, 150)
-      }
-    }
-
-    if (typingStage === 'deleteFirst') {
-      if (typedFirst.length > 0) {
-        timeout = window.setTimeout(() => {
-          setTypedFirst(
-            firstText.slice(0, typedFirst.length - 1),
-          )
-        }, 45)
-      } else {
-        timeout = window.setTimeout(() => {
-          setTypingStage('restart')
-        }, 500)
-      }
-    }
-
-    if (typingStage === 'restart') {
-      timeout = window.setTimeout(() => {
-        setTypingStage('first')
-      }, 500)
-    }
-
-    return () => {
-      window.clearTimeout(timeout)
-    }
-  }, [
-    typedFirst,
-    typedName,
-    typedSecond,
-    typingStage,
-  ])
-
-  const scrollToProjects = () => {
-    document
-      .getElementById('projects')
-      ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-  }
 
   const toggleProjects = () => {
     const willCollapse = showAllProjects
@@ -236,7 +95,7 @@ function App() {
         document
           .getElementById('projects')
           ?.scrollIntoView({
-            behavior: 'smooth',
+            behavior: scrollBehavior(),
             block: 'start',
           })
       }, 100)
@@ -247,7 +106,7 @@ function App() {
     setSelectedJournal(journal)
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: scrollBehavior(),
     })
   }
 
@@ -258,7 +117,7 @@ function App() {
       document
         .getElementById('journal')
         ?.scrollIntoView({
-          behavior: 'smooth',
+          behavior: scrollBehavior(),
           block: 'start',
         })
     }, 50)
@@ -267,23 +126,6 @@ function App() {
   const visibleProjects = showAllProjects
     ? projects
     : projects.slice(0, 2)
-
-  const cursorIsFirst =
-    typingStage === 'first' ||
-    typingStage === 'deleteFirst' ||
-    typingStage === 'restart'
-
-  const cursorIsName =
-    typingStage === 'name' ||
-    typingStage === 'deleteName'
-
-  const nameIsComplete =
-    typedName.length === nameText.length
-
-  const cursorIsSecond =
-    typingStage === 'second' ||
-    typingStage === 'pause' ||
-    typingStage === 'deleteSecond'
 
   if (selectedPage) {
     const { type, item } = selectedPage
@@ -382,119 +224,7 @@ function App() {
       <MobileHeader />
 
       <main className="portfolio-main">
-        <section
-          id="home"
-          className="home-section dot-grid"
-        >
-          <HeroTechIcons />
-
-          <div className="home-inner">
-            <div className="hero-intro">
-              <h1 className="hero-hello">
-                {typedFirst}
-
-                {cursorIsFirst && (
-                  <span className="typing-cursor">
-                    |
-                  </span>
-                )}
-              </h1>
-
-              <img
-                src={annie}
-                alt="Annie"
-                className="hero-profile"
-              />
-
-              <span
-                className={`hero-name ${
-                  nameIsComplete ? 'is-complete' : ''
-                }`}
-              >
-                <span className="hero-name-text">
-                  {typedName}
-                </span>
-
-                {nameIsComplete && (
-                  <span
-                    className="hero-confetti"
-                    aria-hidden="true"
-                  >
-                    {CONFETTI.map((piece, index) => (
-                      <span
-                        key={index}
-                        className={`hero-confetti-piece is-${piece.shape}`}
-                        style={{
-                          '--x': `${piece.x}%`,
-                          '--dx': `${piece.dx}px`,
-                          '--dy': `${piece.dy}px`,
-                          '--r': `${piece.r}deg`,
-                          '--delay': `${piece.delay}ms`,
-                        }}
-                      />
-                    ))}
-                  </span>
-                )}
-
-                {cursorIsName && (
-                  <span className="typing-cursor">
-                    |
-                  </span>
-                )}
-              </span>
-            </div>
-
-            <p className="hero-description">
-              {typedSecond}
-
-              {cursorIsSecond && (
-                <span className="typing-cursor">
-                  |
-                </span>
-              )}
-            </p>
-
-            <div className="hero-skills">
-              <div className="hero-floating-skill hero-floating-skill-1">
-                <TechPill>
-                  UI/UX
-                </TechPill>
-              </div>
-
-              <div className="hero-floating-skill hero-floating-skill-2">
-                <TechPill>
-                  Web Development
-                </TechPill>
-              </div>
-
-              <div className="hero-floating-skill hero-floating-skill-3">
-                <TechPill>
-                  Product Design
-                </TechPill>
-              </div>
-            </div>
-
-            <button
-              type="button"
-              onClick={scrollToProjects}
-              className="hero-button"
-            >
-              <span className="hero-button-arrow">
-                &gt;
-              </span>
-
-              <span className="hero-button-text">
-                View my projects
-              </span>
-
-              <span className="hero-button-cursor">
-                _
-              </span>
-
-              <TapHint className="hero-button-hint" />
-            </button>
-          </div>
-        </section>
+        <Hero />
 
         <section
           id="projects"

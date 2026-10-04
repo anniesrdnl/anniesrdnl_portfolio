@@ -1,3 +1,10 @@
+// Smooth scrolling unless the visitor has asked for reduced motion
+export function scrollBehavior() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ? 'auto'
+    : 'smooth'
+}
+
 // Scrolls to a home-page section. From a project or journal page the section
 // isn't rendered, so set the hash instead and let App switch back and scroll.
 export function goToSection(id) {
@@ -5,7 +12,7 @@ export function goToSection(id) {
 
   if (section) {
     section.scrollIntoView({
-      behavior: 'smooth',
+      behavior: scrollBehavior(),
       block: 'start',
     })
     return
@@ -28,7 +35,7 @@ export function goHome() {
       window.history.replaceState(null, '', homeUrl)
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: scrollBehavior() })
     return
   }
 
