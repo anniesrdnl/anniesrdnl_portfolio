@@ -10,6 +10,7 @@ import ServiceCard from './components/ServiceCard'
 import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
 import ScrollTop from './components/ScrollTop'
+import HeroTechIcons from './components/HeroTechIcons'
 
 import {
   projects,
@@ -383,6 +384,8 @@ function App() {
           id="home"
           className="home-section dot-grid"
         >
+          <HeroTechIcons />
+
           <div className="home-inner">
             <div className="hero-intro">
               <h1 className="hero-hello">
@@ -452,7 +455,7 @@ function App() {
             <div className="hero-skills">
               <div className="hero-floating-skill hero-floating-skill-1">
                 <TechPill>
-                  Full Stack
+                  UI/UX
                 </TechPill>
               </div>
 

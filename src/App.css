@@ -333,6 +333,93 @@ button {
   }
 }
 
+.hero-tech {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-tech-icon {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  display: flex;
+  width: calc(26px * var(--scale, 1));
+  height: calc(26px * var(--scale, 1));
+  margin: calc(-13px * var(--scale, 1)) 0 0 calc(-13px * var(--scale, 1));
+  color: #94a3b8;
+  pointer-events: auto;
+  animation: hero-tech-enter 700ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--enter-delay) both;
+}
+
+.hero-tech-orbit {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: hero-tech-orbit var(--duration) linear var(--phase) infinite;
+  will-change: transform;
+}
+
+.hero-tech-orbit.is-reverse {
+  animation-direction: reverse;
+}
+
+.hero-tech-orbit svg {
+  width: 100%;
+  height: 100%;
+  transition:
+    color 220ms ease,
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) {
+  .hero-tech-icon:hover svg {
+    color: var(--brand);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes hero-tech-orbit {
+  from {
+    transform: rotate(0turn) translateX(var(--radius)) rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn) translateX(var(--radius)) rotate(-1turn);
+  }
+}
+
+@keyframes hero-tech-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-tech-icon {
+    top: var(--my);
+    left: var(--mx);
+    width: calc(22px * var(--scale, 1));
+    height: calc(22px * var(--scale, 1));
+    margin: calc(-11px * var(--scale, 1)) 0 0 calc(-11px * var(--scale, 1));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-tech-icon,
+  .hero-tech-orbit {
+    animation: none;
+  }
+}
+
 .hero-floating-skill > * {
   transition:
     transform 220ms ease,
