@@ -70,12 +70,18 @@ function App() {
         return
       }
 
-      // Back on the home page: scroll to the section named in the hash
-      const sectionId = window.location.hash.slice(1) || 'home'
+      // Back on the home page: scroll to the section named in the hash,
+      // or to the very top when there is none
+      const sectionId = window.location.hash.slice(1)
 
       setSelectedJournal(null)
 
       window.setTimeout(() => {
+        if (!sectionId || sectionId === 'home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+          return
+        }
+
         document
           .getElementById(sectionId)
           ?.scrollIntoView({ behavior: 'smooth', block: 'start' })

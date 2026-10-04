@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import annie from '../assets/annie.png'
+import BrandButton from './BrandButton'
 import { navigation } from '../data/portfolio'
 import { goToSection } from '../utils/goToSection'
 
@@ -121,31 +121,20 @@ function MobileHeader() {
     goToSection(id)
   }
 
-  const goHome = () => {
+  const resetNavigation = () => {
     setActiveItem('home')
     setMenuOpen(false)
-    goToSection('home')
   }
 
   return (
     <>
       <header className="mobile-header">
-        <button
-          type="button"
+        <BrandButton
+          onClick={resetNavigation}
           className="mobile-brand"
-          onClick={goHome}
-          aria-label="Go to home"
-        >
-          <img
-            src={annie}
-            alt=""
-            className="mobile-brand-image"
-          />
-
-          <span className="mobile-brand-name">
-            annie
-          </span>
-        </button>
+          imageClassName="mobile-brand-image"
+          nameClassName="mobile-brand-name"
+        />
 
         <button
           type="button"

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import annie from '../assets/annie.png'
+import BrandButton from './BrandButton'
 import { goToSection } from '../utils/goToSection'
 
 const navigation = [
@@ -242,30 +242,15 @@ function Sidebar() {
     goToSection(id)
   }
 
-  const scrollHome = () => {
-    setActiveSection('')
-    goToSection('home')
-  }
-
   return (
     <aside className="fixed left-0 top-0 z-40 hidden h-screen w-[300px] border-r border-slate-200 bg-[#f8f9fa] lg:flex lg:flex-col">
       <div className="flex h-full min-h-0 flex-col px-[25px] pb-[34px] pt-[40px]">
-        <button
-          type="button"
-          onClick={scrollHome}
-          className="sidebar-brand w-fit border-0 bg-transparent p-0 text-left"
-          aria-label="Go to home"
-        >
-          <img
-            src={annie}
-            alt="Annie"
-            className="h-[44px] w-[44px] rounded-full border border-slate-900 object-cover"
-          />
-
-          <div className="sidebar-brand-text mt-[8px] font-mono text-[22px] leading-none text-slate-950">
-            annie
-          </div>
-        </button>
+        <BrandButton
+          onClick={() => setActiveSection('')}
+          className="flex w-fit flex-col items-start text-left"
+          imageClassName="h-[44px] w-[44px] rounded-full border border-slate-900 object-cover"
+          nameClassName="mt-[8px] font-mono text-[22px] leading-none text-slate-950"
+        />
 
         <nav
           className="mt-[56px] flex flex-col gap-[17px]"
