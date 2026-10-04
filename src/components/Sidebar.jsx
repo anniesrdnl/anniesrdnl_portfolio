@@ -13,13 +13,7 @@ const navigation = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M3.5 7.5h6l1.6 2H20.5v9.5a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5V7.5Z"
-          stroke="currentColor"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
+          className="nav-icon-fill"
           d="M5.5 7.5V5.8A1.3 1.3 0 0 1 6.8 4.5h4.4l1.6 2H18a1.5 1.5 0 0 1 1.5 1.5v1.5"
           stroke="currentColor"
           strokeWidth="1.25"
@@ -27,6 +21,15 @@ const navigation = [
           strokeLinejoin="round"
         />
         <path
+          className="nav-icon-fill"
+          d="M3.5 7.5h6l1.6 2H20.5v9.5a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5V7.5Z"
+          stroke="currentColor"
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className="nav-icon-detail"
           d="M7 13h7M7 16h5"
           stroke="currentColor"
           strokeWidth="1.25"
@@ -45,6 +48,7 @@ const navigation = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
+          className="nav-icon-fill"
           x="4"
           y="4"
           width="16"
@@ -54,6 +58,7 @@ const navigation = [
           strokeWidth="1.25"
         />
         <rect
+          className="nav-icon-detail"
           x="7"
           y="7"
           width="10"
@@ -62,6 +67,7 @@ const navigation = [
           strokeWidth="1.25"
         />
         <path
+          className="nav-icon-detail"
           d="M8 17h8M10 14v3M14 14v3"
           stroke="currentColor"
           strokeWidth="1.25"
@@ -79,6 +85,13 @@ const navigation = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <rect
+          className="nav-icon-fill"
+          x="6"
+          y="4"
+          width="12"
+          height="16"
+        />
         <path
           d="M4 4h16M4 20h16M6 4v16M18 4v16"
           stroke="currentColor"
@@ -86,13 +99,8 @@ const navigation = [
           strokeLinecap="round"
         />
         <path
-          d="M9 8h6M12 8v8"
-          stroke="currentColor"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-        />
-        <path
-          d="M9.5 16h5"
+          className="nav-icon-detail"
+          d="M9 8h6M12 8v8M9.5 16h5"
           stroke="currentColor"
           strokeWidth="1.25"
           strokeLinecap="round"
@@ -110,6 +118,7 @@ const navigation = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
+          className="nav-icon-fill nav-icon-split"
           x="4"
           y="5"
           width="5"
@@ -118,6 +127,7 @@ const navigation = [
           strokeWidth="1.15"
         />
         <rect
+          className="nav-icon-fill nav-icon-split"
           x="10"
           y="3"
           width="5"
@@ -126,6 +136,7 @@ const navigation = [
           strokeWidth="1.15"
         />
         <rect
+          className="nav-icon-fill nav-icon-split"
           x="16"
           y="7"
           width="4"
@@ -152,6 +163,7 @@ const navigation = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
+          className="nav-icon-fill"
           x="3"
           y="5.5"
           width="18"
@@ -161,6 +173,7 @@ const navigation = [
           strokeWidth="1.25"
         />
         <path
+          className="nav-icon-detail"
           d="M4 7L12 13L20 7"
           stroke="currentColor"
           strokeWidth="1.25"
@@ -185,6 +198,15 @@ function Sidebar() {
 
       if (window.scrollY < 150) {
         setActiveSection('')
+        return
+      }
+
+      const reachedBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2
+
+      if (reachedBottom) {
+        setActiveSection(sectionIds[sectionIds.length - 1])
         return
       }
 

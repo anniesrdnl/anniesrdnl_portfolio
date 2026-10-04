@@ -542,6 +542,28 @@ button {
   height: 100%;
 }
 
+.nav-icon-fill {
+  fill: currentColor;
+  fill-opacity: 0;
+  transition: fill-opacity 220ms ease;
+}
+
+.nav-icon-detail,
+.nav-icon-split {
+  transition:
+    fill-opacity 220ms ease,
+    stroke 220ms ease;
+}
+
+.sidebar-nav-active .nav-icon-fill {
+  fill-opacity: 1;
+}
+
+.sidebar-nav-active .nav-icon-detail,
+.sidebar-nav-active .nav-icon-split {
+  stroke: #f8f9fa;
+}
+
 .sidebar-nav-label {
   position: relative;
   display: inline-block;
