@@ -6,7 +6,7 @@ import MobileHeader from './components/MobileHeader'
 import ProjectCard from './components/ProjectCard'
 import ProjectDetail from './components/ProjectDetail'
 import ServiceDetail from './components/ServiceDetail'
-import ServiceCard from './components/ServiceCard'
+import ServiceTabs from './components/ServiceTabs'
 import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
 import ScrollTop from './components/ScrollTop'
@@ -540,17 +540,11 @@ function App() {
           <div className="content-inner">
             <SectionHeading
               number="02"
-              title="services"
+              title="how can I help you?"
+              align="center"
             />
 
-            <div className="services-grid">
-              {services.map((service) => (
-                <ServiceCard
-                  key={service.title}
-                  service={service}
-                />
-              ))}
-            </div>
+            <ServiceTabs services={services} />
           </div>
         </section>
 
