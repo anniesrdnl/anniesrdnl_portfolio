@@ -12,6 +12,7 @@ import TechPill from './components/TechPill'
 import ScrollTop from './components/ScrollTop'
 import HeroTechIcons from './components/HeroTechIcons'
 import TapHint from './components/TapHint'
+import ContactCard from './components/ContactCard'
 
 import {
   projects,
@@ -636,110 +637,7 @@ function App() {
               )}
             </div>
 
-            <div
-              id="contact"
-              className="contact-card"
-            >
-              <div className="contact-content">
-                <div className="contact-copy">
-                  <h2>
-                    Ready to build something
-                    real?
-                  </h2>
-
-                  <p>
-                    Have a product idea or a
-                    process that needs
-                    automating? Let's talk
-                    about turning it into a
-                    working system.
-                  </p>
-
-                  <div className="contact-socials">
-                    <a
-                      href="https://github.com/anniesrdnl/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github ↗
-                    </a>
-
-                    <a
-                      href="mailto:anniesardiniola@gmail.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Gmail ↗
-                    </a>
-
-                    <a
-                      href="https://www.facebook.com/share/1HN6oJgtaM/?mibextid=wwXIfr/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Facebook ↗
-                    </a>
-                  </div>
-                </div>
-
-                <div className="contact-action">
-                  <a
-                    href="mailto:anniesardiniola@gmail.com"
-                    className="contact-button"
-                  >
-                    <svg
-                      width="17"
-                      height="17"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect
-                        x="3"
-                        y="5"
-                        width="18"
-                        height="14"
-                        rx="2"
-                      />
-                      <path d="m3 7 9 6 9-6" />
-                    </svg>
-
-                    <span>
-                      Get in touch
-                    </span>
-                  </a>
-
-                  <a
-                    href="mailto:anniesardiniola@gmail.com"
-                    className="contact-email"
-                  >
-                    anniesardiniola@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="contact-lights"
-                aria-hidden="true"
-              >
-                {Array.from({
-                  length: 110,
-                }).map((_, index) => (
-                  <span
-                    key={index}
-                    className="contact-light"
-                    style={{
-                      '--light-delay': `${(index % 18) * 0.11}s`,
-                      '--light-duration': `${1.8 + (index % 5) * 0.18}s`,
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
+            <ContactCard />
           </div>
         </section>
       </main>
