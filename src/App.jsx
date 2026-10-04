@@ -11,6 +11,7 @@ import SectionHeading from './components/SectionHeading'
 import TechPill from './components/TechPill'
 import ScrollTop from './components/ScrollTop'
 import HeroTechIcons from './components/HeroTechIcons'
+import TapHint from './components/TapHint'
 
 import {
   projects,
@@ -488,6 +489,8 @@ function App() {
               <span className="hero-button-cursor">
                 _
               </span>
+
+              <TapHint className="hero-button-hint" />
             </button>
           </div>
         </section>

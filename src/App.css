@@ -369,7 +369,7 @@ button {
 .hero-tech-orbit svg {
   width: 100%;
   height: 100%;
-  opacity: 0.45;
+  opacity: 0.3;
   transition:
     color 220ms ease,
     opacity 220ms ease,
