@@ -1,4 +1,4 @@
-import todosImage from '../assets/awesometodos.png'
+import todosImage from '../assets/awesometodos_v2.png'
 import teechImage from '../assets/teech.png'
 import smartwasteImage from '../assets/smartwaste.png'
 
