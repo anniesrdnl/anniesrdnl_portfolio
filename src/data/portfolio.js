@@ -54,7 +54,7 @@ export const projects = [
       'ONNX Runtime Web',
     ],
     link: 'https://smartwaste-cv.vercel.app/#classifier',
-    source: 'https://github.com/anniesrdnl/Smart-Waste',
+    source: 'https://github.com/anniesrdnl/Smart-Waste-Management-Classifier',
     image: smartwasteImage,
   },
   {
