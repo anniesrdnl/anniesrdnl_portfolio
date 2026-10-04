@@ -369,14 +369,17 @@ button {
 .hero-tech-orbit svg {
   width: 100%;
   height: 100%;
+  opacity: 0.45;
   transition:
     color 220ms ease,
+    opacity 220ms ease,
     transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @media (hover: hover) {
   .hero-tech-icon:hover svg {
     color: var(--brand);
+    opacity: 1;
     transform: scale(1.15);
   }
 }
@@ -433,6 +436,7 @@ button {
 }
 
 .hero-button {
+  position: relative;
   display: inline-flex;
   min-width: 208px;
   min-height: 45px;
@@ -504,6 +508,117 @@ button {
 .hero-button:focus-visible {
   outline: 2px solid #64748b;
   outline-offset: 4px;
+}
+
+.tap-hint {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.hero-button-hint {
+  top: 50%;
+  left: calc(100% - 38px);
+}
+
+@media (hover: hover) {
+  .hero-button:hover .hero-button-hint {
+    opacity: 0;
+  }
+}
+
+.tap-hint-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: tap-hint-enter 500ms cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+}
+
+.tap-hint-hand {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 2px 3px rgba(2, 6, 23, 0.25));
+  transform-origin: 33% 10%;
+  animation: tap-hint-press 2.4s cubic-bezier(0.22, 1, 0.36, 1) 1.7s infinite;
+}
+
+.tap-hint-ripple {
+  position: absolute;
+  top: 3px;
+  left: 11px;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  opacity: 0;
+  animation: tap-hint-ripple 2.4s cubic-bezier(0.22, 1, 0.36, 1) 1.7s infinite;
+}
+
+@keyframes tap-hint-enter {
+  from {
+    opacity: 0;
+    transform: translate(10px, 10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes tap-hint-press {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  10% {
+    transform: translate(-1px, -3px) scale(1);
+  }
+
+  20% {
+    transform: translate(0, 1px) scale(0.86);
+  }
+
+  32% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes tap-hint-ripple {
+  0%,
+  18% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  22% {
+    opacity: 0.9;
+    transform: scale(0.45);
+  }
+
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-hint-inner,
+  .tap-hint-hand {
+    animation: none;
+  }
+
+  .tap-hint-ripple {
+    display: none;
+  }
 }
 
 .brand-button {
