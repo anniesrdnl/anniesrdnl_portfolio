@@ -1,6 +1,7 @@
 import todosImage from '../assets/awesometodos_v2.png'
 import teechImage from '../assets/teech.png'
 import smartwasteImage from '../assets/smartwaste.png'
+import suepImage from '../assets/suep.png'
 
 export const navigation = [
   {
@@ -105,6 +106,28 @@ export const projects = [
     source: 'https://github.com/anniesrdnl/Awesometodos_app',
     image: todosImage,
   },
+  {
+    id: 4,
+    slug: 'school-uniform-exchange-platform',
+    title: 'School Uniform Exchange Platform',
+    tagline: 'Buy, sell and swap pre-loved school uniforms with students on your campus.',
+    description:
+      'A simple platform where students can buy, sell, and exchange second-hand school uniforms, making uniforms more affordable, accessible, and sustainable.',
+    overview: [
+      'School Uniform Exchange Platform is a web app where students can buy, sell and swap second-hand school uniforms. Students outgrow uniforms long before the uniforms wear out, so it gives them a simple way to pass them on, making uniforms more affordable, accessible and sustainable.',
+      'Students can list a uniform with up to five photos and choose to sell it, swap it or both. Others can search by keyword, category, size, condition and price, send a request to buy or swap, and message the seller to arrange a hand-over on campus. An admin dashboard handles user verification, reports and listing moderation.',
+      'The frontend is built with React, Vite and Tailwind CSS. The API runs on Node.js and Express, with Supabase for the PostgreSQL database and authentication, Cloudinary for photo storage and Vercel for hosting.',
+    ],
+    technologies: [
+      'React',
+      'Express',
+      'Supabase',
+      'Tailwind CSS',
+    ],
+    link: 'https://school-uniform-exchange-platform.vercel.app/',
+    source: 'https://github.com/anniesrdnl/School-Uniform-Exchange-Platform',
+    image: suepImage,
+  },
 ]
 
 export const services = [
@@ -197,6 +220,7 @@ export const services = [
     ],
     projects: [
       'smart-waste-classifier',
+      'school-uniform-exchange-platform',
       'teech',
       'awesome-todos',
     ],
