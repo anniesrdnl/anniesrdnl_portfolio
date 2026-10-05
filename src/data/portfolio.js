@@ -109,44 +109,45 @@ export const projects = [
 
 export const services = [
   {
-    slug: 'product-design',
-    title: 'Product Design',
+    slug: 'ui-ux-delivery',
+    title: 'UI/UX Delivery',
     description:
-      'Designing clear, intuitive, and responsive digital experiences from early concepts to polished interfaces.',
+      'Designing user-centered interfaces and delivering them as developer-ready screens that are easy to build and easy to use.',
     overview: [
-      'I design digital products that are clear, intuitive and easy to use, from rough early ideas to polished, responsive interfaces that are ready to build.',
-      'Good design starts with understanding who will use the product and what they need to get done, so every screen has a clear purpose and nothing gets in the way.',
+      'I design interfaces around the people who will use them, mapping how they move through a product and shaping each screen so the next step always feels obvious.',
+      'Because I also build what I design, I deliver UI that is ready for development: consistent components, responsive layouts and clear specs, so nothing gets lost between design and code.',
     ],
     offerings: [
       'User flows and wireframes',
       'High-fidelity UI design in Figma',
-      'Responsive layouts for desktop and mobile',
-      'Interactive prototypes for testing ideas',
-      'Reusable components and simple design systems',
+      'Clickable prototypes for usability testing',
+      'Responsive layouts for desktop, tablet and mobile',
+      'Component libraries and developer-ready handoff',
     ],
     process: [
       {
         title: 'Understand',
-        text: 'Learn the goals, the users and the problem the product needs to solve.',
+        text: 'Learn who the users are, what they need to get done and where they get stuck.',
       },
       {
-        title: 'Explore',
-        text: 'Sketch flows and wireframes to try ideas quickly before committing.',
+        title: 'Map',
+        text: 'Sketch user flows and wireframes to shape the experience before adding detail.',
       },
       {
         title: 'Design',
-        text: 'Turn the strongest direction into polished, responsive screens.',
+        text: 'Turn the strongest direction into polished, accessible and responsive screens.',
       },
       {
-        title: 'Refine',
-        text: 'Gather feedback and iterate until it feels effortless to use.',
+        title: 'Deliver',
+        text: 'Test the prototype, refine it, and hand off components that are ready to build.',
       },
     ],
     tools: [
       'Figma',
       'UI/UX',
-      'Responsive Design',
       'Prototyping',
+      'Responsive Design',
+      'Design Systems',
     ],
     projects: [
       'teech',
