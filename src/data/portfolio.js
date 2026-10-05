@@ -109,45 +109,44 @@ export const projects = [
 
 export const services = [
   {
-    slug: 'ui-ux-delivery',
-    title: 'UI/UX Delivery',
+    slug: 'product-design',
+    title: 'Product Design',
     description:
-      'Designing user-centered interfaces and delivering them as developer-ready screens that are easy to build and easy to use.',
+      'Designing clear, intuitive, and responsive digital experiences from early concepts to polished interfaces.',
     overview: [
-      'I design interfaces around the people who will use them, mapping how they move through a product and shaping each screen so the next step always feels obvious.',
-      'Because I also build what I design, I deliver UI that is ready for development: consistent components, responsive layouts and clear specs, so nothing gets lost between design and code.',
+      'I design digital products that are clear, intuitive and easy to use, from rough early ideas to polished, responsive interfaces that are ready to build.',
+      'Good design starts with understanding who will use the product and what they need to get done, so every screen has a clear purpose and nothing gets in the way.',
     ],
     offerings: [
       'User flows and wireframes',
       'High-fidelity UI design in Figma',
-      'Clickable prototypes for usability testing',
-      'Responsive layouts for desktop, tablet and mobile',
-      'Component libraries and developer-ready handoff',
+      'Responsive layouts for desktop and mobile',
+      'Interactive prototypes for testing ideas',
+      'Reusable components and simple design systems',
     ],
     process: [
       {
         title: 'Understand',
-        text: 'Learn who the users are, what they need to get done and where they get stuck.',
+        text: 'Learn the goals, the users and the problem the product needs to solve.',
       },
       {
-        title: 'Map',
-        text: 'Sketch user flows and wireframes to shape the experience before adding detail.',
+        title: 'Explore',
+        text: 'Sketch flows and wireframes to try ideas quickly before committing.',
       },
       {
         title: 'Design',
-        text: 'Turn the strongest direction into polished, accessible and responsive screens.',
+        text: 'Turn the strongest direction into polished, responsive screens.',
       },
       {
-        title: 'Deliver',
-        text: 'Test the prototype, refine it, and hand off components that are ready to build.',
+        title: 'Refine',
+        text: 'Gather feedback and iterate until it feels effortless to use.',
       },
     ],
     tools: [
       'Figma',
       'UI/UX',
-      'Prototyping',
       'Responsive Design',
-      'Design Systems',
+      'Prototyping',
     ],
     projects: [
       'teech',
@@ -203,48 +202,46 @@ export const services = [
     ],
   },
   {
-    slug: 'full-stack',
-    title: 'Full-stack Delivery',
+    slug: 'ui-ux-delivery',
+    title: 'UI/UX Delivery',
     description:
-      'Handling the complete development process across frontend, backend, APIs, databases, deployment, and iteration.',
+      'Taking interfaces from design to a polished, accessible product, and refining the experience based on how people actually use it.',
     overview: [
-      'I handle the whole journey of a product: the interface people use, the backend, APIs and database behind it, and the deployment that puts it in front of users.',
-      'Owning both sides means fewer handoffs, faster iteration and a product that holds together as it grows.',
+      'I close the gap between a design file and a finished product: every screen built accurately, every state accounted for and every interaction tuned so it feels effortless.',
+      'Because I both design and develop, I can review an interface, find where people get stuck and ship the fixes myself, from the component library down to the final details.',
     ],
     offerings: [
-      'Frontend and backend development',
-      'REST API design and integration',
-      'Database design with PostgreSQL and Supabase',
-      'Authentication and data handling',
-      'Deployment, maintenance and iteration',
+      'UX reviews and usability improvements',
+      'Accurate design-to-code implementation',
+      'Accessible interfaces with clear focus states and contrast',
+      'Reusable UI components and design systems',
+      'Interaction details: loading, empty and error states',
     ],
     process: [
       {
-        title: 'Scope',
-        text: 'Agree on the features, the data model and what a first release includes.',
+        title: 'Review',
+        text: 'Walk through the interface to find friction, inconsistencies and accessibility gaps.',
+      },
+      {
+        title: 'Prioritize',
+        text: 'Decide which improvements matter most to users and tackle those first.',
       },
       {
         title: 'Build',
-        text: 'Develop the frontend, backend and database together, end to end.',
+        text: 'Implement the UI as reusable, accessible components that match the design.',
       },
       {
-        title: 'Ship',
-        text: 'Deploy to production with the right setup for hosting and data.',
-      },
-      {
-        title: 'Iterate',
-        text: 'Fix issues, add features and keep the product healthy over time.',
+        title: 'Refine',
+        text: 'Polish the details, test with real use and keep the experience consistent.',
       },
     ],
     tools: [
+      'Figma',
+      'UI/UX',
+      'Accessibility',
+      'Design Systems',
       'React.js',
-      'Node.js',
-      'Express',
-      'Supabase',
-      'PostgreSQL',
-      'REST APIs',
-      'Git',
-      'Vercel',
+      'Tailwind CSS',
     ],
     projects: [
       'teech',
