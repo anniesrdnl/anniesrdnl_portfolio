@@ -118,6 +118,10 @@ export const projects = [
       'Students can list a uniform with up to five photos and choose to sell it, swap it or both. Others can search by keyword, category, size, condition and price, send a request to buy or swap, and message the seller to arrange a hand-over on campus. An admin dashboard handles user verification, reports and listing moderation.',
       'The frontend is built with React, Vite and Tailwind CSS. The API runs on Node.js and Express, with Supabase for the PostgreSQL database and authentication, Cloudinary for photo storage and Vercel for hosting.',
     ],
+    motivation: [
+      'Students outgrow their uniforms long before the uniforms wear out, and buying new ones every school year adds up. Meanwhile, uniforms that are still in good condition end up sitting in closets or thrown away.',
+      'I wanted to give students a simple way to pass them on: a place to find the right size for less, swap what no longer fits and keep usable uniforms in circulation. It was also my chance to build a complete full-stack product, from the database and API to messaging and an admin dashboard.',
+    ],
     technologies: [
       'React',
       'Express',
