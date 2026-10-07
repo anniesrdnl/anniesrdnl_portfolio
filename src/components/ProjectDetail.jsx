@@ -89,7 +89,7 @@ function ProjectDetail({ project }) {
 
         {project.date && (
           <time className="project-detail-date">
-            Made on {project.date}
+            Made in {project.date}
           </time>
         )}
       </div>

@@ -35,6 +35,7 @@ export const projects = [
   {
     id: 1,
     slug: 'teech',
+    date: '2026',
     title: 'Teech',
     tagline: 'A clearer way for students and faculty to connect for consultations.',
     description:
@@ -60,6 +61,7 @@ export const projects = [
   {
     id: 2,
     slug: 'smart-waste-classifier',
+    date: '2026',
     title: 'Smart Waste Management Classifier',
     tagline: 'My machine learning course project: sorting waste from a single photo.',
     description:
@@ -86,6 +88,7 @@ export const projects = [
   {
     id: 3,
     slug: 'school-uniform-exchange-platform',
+    date: '2026',
     title: 'School Uniform Exchange Platform',
     tagline: 'Buy, sell and swap pre-loved school uniforms with students on your campus.',
     description:
@@ -112,6 +115,7 @@ export const projects = [
   {
     id: 4,
     slug: 'awesome-todos',
+    date: '2025',
     title: 'Awesome Todos',
     tagline: 'A simple, clean way to keep track of everyday tasks.',
     description:
