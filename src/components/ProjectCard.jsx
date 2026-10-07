@@ -32,25 +32,23 @@ function ProjectCard({ project }) {
             {project.title}
           </h3>
 
-          <div className="flex shrink-0 items-center gap-3">
-            {project.date && (
-              <time className="project-card-date font-mono text-sm text-slate-400">
-                {project.date}
-              </time>
-            )}
-
-            <span
-              className="project-card-arrow font-mono text-lg text-slate-400"
-              aria-hidden="true"
-            >
-              →
-            </span>
-          </div>
+          <span
+            className="project-card-arrow shrink-0 font-mono text-lg text-slate-400"
+            aria-hidden="true"
+          >
+            →
+          </span>
         </div>
 
         <p className="project-card-description text-slate-700">
           {project.description}
         </p>
+
+        {project.date && (
+          <time className="project-card-date mt-auto pt-5 font-mono text-sm text-slate-400">
+            {project.date}
+          </time>
+        )}
       </div>
     </a>
   )
