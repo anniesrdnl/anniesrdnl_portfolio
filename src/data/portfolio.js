@@ -34,6 +34,31 @@ export const navigation = [
 export const projects = [
   {
     id: 1,
+    slug: 'teech',
+    title: 'Teech',
+    tagline: 'A clearer way for students and faculty to connect for consultations.',
+    description:
+      'A consultation platform that gives students and faculty a clearer way to connect, from finding available instructors to booking consultations.',
+    overview: [
+      'Teech is a consultation platform that makes it easier for students and faculty to connect. Instead of chasing teachers between classes or waiting on replies, students can find available instructors and book a consultation in a few steps.',
+      'It is built with Next.js and React, styled with CSS Modules, and designed to feel simple and clear for both students and faculty.',
+    ],
+    motivation: [
+      'As a student, I have seen how hard it can be to get time with faculty: consultation hours clash with classes, and it is rarely clear who is available and when.',
+      'I wanted a clearer, more respectful way for both sides to set up consultations. Teech is my take on that, putting teachers within reach.',
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'CSS Modules',
+      'UI/UX',
+    ],
+    link: 'https://teech-app.vercel.app/',
+    source: 'https://github.com/Aelowww/Teech',
+    image: teechImage,
+  },
+  {
+    id: 2,
     slug: 'smart-waste-classifier',
     title: 'Smart Waste Management Classifier',
     tagline: 'My machine learning course project: sorting waste from a single photo.',
@@ -59,55 +84,7 @@ export const projects = [
     image: smartwasteImage,
   },
   {
-    id: 2,
-    slug: 'teech',
-    title: 'Teech',
-    tagline: 'A clearer way for students and faculty to connect for consultations.',
-    description:
-      'A consultation platform that gives students and faculty a clearer way to connect, from finding available instructors to booking consultations.',
-    overview: [
-      'Teech is a consultation platform that makes it easier for students and faculty to connect. Instead of chasing teachers between classes or waiting on replies, students can find available instructors and book a consultation in a few steps.',
-      'It is built with Next.js and React, styled with CSS Modules, and designed to feel simple and clear for both students and faculty.',
-    ],
-    motivation: [
-      'As a student, I have seen how hard it can be to get time with faculty: consultation hours clash with classes, and it is rarely clear who is available and when.',
-      'I wanted a clearer, more respectful way for both sides to set up consultations. Teech is my take on that, putting teachers within reach.',
-    ],
-    technologies: [
-      'Next.js',
-      'React',
-      'CSS Modules',
-      'UI/UX',
-    ],
-    link: 'https://teech-app.vercel.app/',
-    source: 'https://github.com/Aelowww/Teech',
-    image: teechImage,
-  },
-  {
     id: 3,
-    slug: 'awesome-todos',
-    title: 'Awesome Todos',
-    tagline: 'A simple, clean way to keep track of everyday tasks.',
-    description:
-      'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
-    overview: [
-      'Awesome Todos is a simple task management app for creating, organizing and tracking todos. It sticks to the essentials and keeps the interface clean, so adding a task or checking one off takes a second.',
-      'It is built with React and plain CSS, which made it a good way to practice components, state and handling user input.',
-    ],
-    motivation: [
-      'Awesome Todos was one of my early React projects. I wanted to understand how components and state fit together by building something small that I would actually use day to day.',
-    ],
-    technologies: [
-      'React.js',
-      'JavaScript',
-      'CSS',
-    ],
-    link: 'https://awesometodos-app-1.onrender.com',
-    source: 'https://github.com/anniesrdnl/Awesometodos_app',
-    image: todosImage,
-  },
-  {
-    id: 4,
     slug: 'school-uniform-exchange-platform',
     title: 'School Uniform Exchange Platform',
     tagline: 'Buy, sell and swap pre-loved school uniforms with students on your campus.',
@@ -131,6 +108,29 @@ export const projects = [
     link: 'https://school-uniform-exchange-platform.vercel.app/',
     source: 'https://github.com/anniesrdnl/School-Uniform-Exchange-Platform',
     image: suepImage,
+  },
+  {
+    id: 4,
+    slug: 'awesome-todos',
+    title: 'Awesome Todos',
+    tagline: 'A simple, clean way to keep track of everyday tasks.',
+    description:
+      'A simple task management web app for creating, organizing, and tracking todos through a clean and straightforward interface.',
+    overview: [
+      'Awesome Todos is a simple task management app for creating, organizing and tracking todos. It sticks to the essentials and keeps the interface clean, so adding a task or checking one off takes a second.',
+      'It is built with React and plain CSS, which made it a good way to practice components, state and handling user input.',
+    ],
+    motivation: [
+      'Awesome Todos was one of my early React projects. I wanted to understand how components and state fit together by building something small that I would actually use day to day.',
+    ],
+    technologies: [
+      'React.js',
+      'JavaScript',
+      'CSS',
+    ],
+    link: 'https://awesometodos-app-1.onrender.com',
+    source: 'https://github.com/anniesrdnl/Awesometodos_app',
+    image: todosImage,
   },
 ]
 
@@ -280,7 +280,7 @@ export const services = [
 
 export const journals = [
   {
-    id: 1,
+    id: 5,
     title: 'Still Figuring Things Out',
     excerpt:
       'College made me realize that I do not need to have everything figured out yet. Sometimes learning means trying something, getting it wrong, and trying again.',
@@ -321,7 +321,7 @@ export const journals = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     title: 'One Deadline at a Time',
     excerpt:
       'Some weeks feel like everything is due at once. I am learning to focus on what I can finish today instead of worrying about everything at the same time.',
@@ -362,7 +362,7 @@ export const journals = [
     ],
   },
   {
-    id: 3,
+    id: 7,
     title: 'More Than Just Grades',
     excerpt:
       'I used to think doing well in college was mostly about getting good grades. Over time, I learned that growth also comes from the people I meet, the mistakes I make, and the things I try outside the classroom.',
