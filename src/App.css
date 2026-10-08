@@ -1942,7 +1942,67 @@ button {
 }
 
 .project-detail .journal-back {
+  position: relative;
+  isolation: isolate;
+  margin-left: -14px;
+  padding: 10px 14px;
+  border-radius: 999px;
   text-decoration: none;
+}
+
+.project-detail .journal-back::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #eef1f5;
+  opacity: 0;
+  transform: scale(0.88);
+  transition:
+    opacity 200ms ease,
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 160ms ease;
+}
+
+.project-detail .journal-back-arrow + span {
+  background-image: none;
+}
+
+@media (hover: hover) {
+  .project-detail .journal-back:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .project-detail .journal-back:hover .journal-back-arrow {
+    transform: translateX(-3px);
+  }
+}
+
+.project-detail .journal-back:active {
+  transform: scale(0.94);
+}
+
+.project-detail .journal-back:active::before {
+  opacity: 1;
+  transform: scale(1);
+  background: #dde3ea;
+}
+
+.project-detail .journal-back:active .journal-back-arrow {
+  transform: translateX(-8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-detail .journal-back::before {
+    transition: opacity 180ms ease;
+    transform: none;
+  }
+
+  .project-detail .journal-back:active {
+    transform: none;
+  }
 }
 
 .project-detail-title {
