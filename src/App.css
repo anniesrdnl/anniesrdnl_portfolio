@@ -471,13 +471,56 @@ button {
   appearance: none;
 }
 
+.section-action {
+  -webkit-tap-highlight-color: transparent;
+  transition: color 180ms ease;
+}
+
 .section-action-arrow {
   display: inline-block;
   margin-right: 7px;
+  transition: transform 220ms ease;
 }
 
 .section-action-text {
   display: inline-block;
+  transition: opacity 160ms ease;
+}
+
+@media (hover: hover) {
+  .section-action:hover {
+    color: #0f172a;
+  }
+
+  .section-action:hover .section-action-arrow {
+    transform: translateX(3px);
+  }
+}
+
+.section-action:active .section-action-arrow {
+  transform: translateX(5px);
+}
+
+.section-action:active .section-action-text {
+  opacity: 0.6;
+}
+
+.section-action:focus-visible {
+  color: #0f172a;
+  border-radius: 4px;
+  outline: 2px solid #64748b;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-action-arrow {
+    transition: none;
+  }
+
+  .section-action:hover .section-action-arrow,
+  .section-action:active .section-action-arrow {
+    transform: none;
+  }
 }
 
 .section-action-cursor {
