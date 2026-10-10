@@ -119,15 +119,15 @@ export const projects = [
     date: '2025',
     status: 'In development',
     title: 'GTOURS',
-    tagline: 'A tours platform that is still being built.',
+    tagline: 'An online tourist manual for the tourist spots of Guimaras.',
     description:
-      'A tours platform currently in development, focused on making it easier to discover, plan and book tours.',
+      'An online manual for tourists visiting Guimaras that works like a tour guide, helping visitors learn about and explore the island\'s tourist spots. Currently in development.',
     overview: [
-      'GTOURS is a tours platform that is still in development. It is being built to make discovering, planning and booking tours simpler and clearer.',
-      'The project is a work in progress, so features and details will keep changing as it takes shape.',
+      'GTOURS is an online tourist manual for the tourist spots of Guimaras. It is meant to act as a tour guide, giving visitors the information they need to discover and explore the island on their own.',
+      'The project is still in development, so features and details will keep changing as it takes shape.',
     ],
     motivation: [
-      'I wanted to build a complete, real-world product from scratch and grow it step by step. GTOURS is that project, and I am sharing it while it is still being built.',
+      'Guimaras has many beautiful places, but visitors do not always have a clear, handy guide to what to see and how to enjoy it. GTOURS is meant to fill that gap by putting a tour guide in every tourist\'s pocket.',
     ],
     technologies: [
       'In Development',
