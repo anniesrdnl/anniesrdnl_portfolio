@@ -36,7 +36,7 @@ export const projects = [
   {
     id: 8,
     slug: 'gtours',
-    date: '2026',
+    date: '2025',
     status: 'In development',
     title: 'GTOURS',
     tagline: 'A tours platform that is still being built.',
