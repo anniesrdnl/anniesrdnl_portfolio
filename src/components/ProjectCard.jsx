@@ -44,10 +44,20 @@ function ProjectCard({ project }) {
           {project.description}
         </p>
 
-        {project.date && (
-          <time className="project-card-date mt-auto pt-5 font-mono text-sm text-slate-400">
-            {project.date}
-          </time>
+        {(project.date || project.status) && (
+          <div className="mt-auto flex items-center justify-between gap-3 pt-5 font-mono text-sm text-slate-400">
+            {project.date && (
+              <time className="project-card-date">
+                {project.date}
+              </time>
+            )}
+
+            {project.status && (
+              <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs text-amber-700">
+                {project.status}
+              </span>
+            )}
+          </div>
         )}
       </div>
     </a>

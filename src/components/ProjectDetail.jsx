@@ -43,28 +43,36 @@ function ProjectDetail({ project }) {
 
       <div className="project-detail-footer">
         <div className="project-detail-actions">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-detail-button is-primary"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-detail-button is-primary"
             >
-              <rect x="3" y="4" width="18" height="14" rx="2" />
-              <path d="M8 21h8M12 18v3" />
-            </svg>
-            <span>Live Demo</span>
-          </a>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M8 21h8M12 18v3" />
+              </svg>
+              <span>Live Demo</span>
+            </a>
+          )}
+
+          {project.status && (
+            <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-mono text-sm text-amber-700">
+              {project.status}
+            </span>
+          )}
 
           {project.source && (
             <a

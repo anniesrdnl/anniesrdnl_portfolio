@@ -2,6 +2,7 @@ import todosImage from '../assets/awesometodos_v3.png'
 import teechImage from '../assets/teech.png'
 import smartwasteImage from '../assets/smartwaste.png'
 import suepImage from '../assets/suep.png'
+import gtoursImage from '../assets/GTOURS.png'
 
 export const navigation = [
   {
@@ -32,6 +33,27 @@ export const navigation = [
 ]
 
 export const projects = [
+  {
+    id: 8,
+    slug: 'gtours',
+    date: '2026',
+    status: 'In development',
+    title: 'GTOURS',
+    tagline: 'A tours platform that is still being built.',
+    description:
+      'A tours platform currently in development, focused on making it easier to discover, plan and book tours.',
+    overview: [
+      'GTOURS is a tours platform that is still in development. It is being built to make discovering, planning and booking tours simpler and clearer.',
+      'The project is a work in progress, so features and details will keep changing as it takes shape.',
+    ],
+    motivation: [
+      'I wanted to build a complete, real-world product from scratch and grow it step by step. GTOURS is that project, and I am sharing it while it is still being built.',
+    ],
+    technologies: [
+      'In Development',
+    ],
+    image: gtoursImage,
+  },
   {
     id: 1,
     slug: 'teech',
