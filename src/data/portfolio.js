@@ -3,6 +3,7 @@ import teechImage from '../assets/teech.png'
 import smartwasteImage from '../assets/smartwaste.png'
 import suepImage from '../assets/suep.png'
 import gtoursImage from '../assets/GTOURS.png'
+import kwestImage from '../assets/kwest.png'
 
 export const navigation = [
   {
@@ -33,6 +34,29 @@ export const navigation = [
 ]
 
 export const projects = [
+  {
+    id: 9,
+    slug: 'kwest',
+    date: '2026',
+    title: 'Kwest',
+    tagline: 'Turn your notes into flashcard decks and remember more.',
+    description:
+      'A study app that turns your notes into flashcard decks, so you can study a little every day and remember more, wrapped in a playful pixel-art interface.',
+    overview: [
+      'Kwest is a study app that turns your notes into flashcard decks. Instead of rereading pages of notes, you review a few cards each day and build up what you remember over time.',
+      'The landing page leans into a playful pixel-art look: a pixel wordmark, a soft pink grid backdrop and floating flashcards, so studying feels more like a quest than a chore.',
+    ],
+    motivation: [
+      'As a student, I know how easy it is to take notes and never look at them again. Studying a little every day works better than cramming, but it only sticks if it feels light.',
+      'I wanted a tool that makes that habit easy to start and fun to keep, which is why Kwest pairs a simple notes-to-flashcards flow with a friendly pixel-art style.',
+    ],
+    technologies: [
+      'Flashcards',
+      'Pixel Art',
+      'UI/UX',
+    ],
+    image: kwestImage,
+  },
   {
     id: 1,
     slug: 'teech',
