@@ -38,6 +38,7 @@ export const projects = [
     id: 9,
     slug: 'kwest',
     date: '2026',
+    status: 'In development',
     title: 'Kwest',
     tagline: 'Turn your notes into flashcard decks and remember more.',
     description:
