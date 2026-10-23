@@ -2101,7 +2101,12 @@ button {
   transition:
     transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
     border-color 180ms ease,
-    background-color 180ms ease;
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.project-detail-button svg {
+  transition: transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .project-detail-button.is-primary {
@@ -2112,17 +2117,30 @@ button {
 }
 
 .project-detail-button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   border-color: #94a3b8;
+  background: #f8fafc;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
 }
 
 .project-detail-button.is-primary:hover {
   border-color: #1e293b;
   background: #1e293b;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.22);
+}
+
+.project-detail-button:hover svg {
+  transform: scale(1.12);
 }
 
 .project-detail-button:active {
-  transform: translateY(1px) scale(0.97);
+  transform: translateY(1px) scale(0.96);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.1);
+  transition-duration: 80ms;
+}
+
+.project-detail-button:active svg {
+  transform: scale(0.94);
 }
 
 .project-detail-button:focus-visible {
@@ -2212,6 +2230,18 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .project-detail {
     animation: none;
+  }
+
+  .project-detail-button,
+  .project-detail-button svg {
+    transition: none;
+  }
+
+  .project-detail-button:hover,
+  .project-detail-button:active,
+  .project-detail-button:hover svg,
+  .project-detail-button:active svg {
+    transform: none;
   }
 }
 /* Service detail page */
